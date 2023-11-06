@@ -9,7 +9,10 @@ Rails.application.routes.draw do
 
   get("/movies", { :controller => "movies", :action => "index" })
   get("/movies/:path_id", { :controller => "movies", :action => "show" })
-  
+  post("/modify_movie_record/:the_id", {:controller => "movies", :action => "update" })
+  post("/insert_movie_record", { :controller => "movies", :action => "create" })
+  get("/delete_movie/:an_id", { :controller => "movies", :action => "destroy" })
+
   get("/actors", { :controller => "actors", :action => "index" })
   get("/actors/:path_id", { :controller => "actors", :action => "show" })
 end
